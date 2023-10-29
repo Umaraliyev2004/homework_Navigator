@@ -14,6 +14,30 @@ class CallPage extends StatelessWidget {
         ],
         title: const Text("Part of Calls"),
       ),
+      body: ListView.builder(
+        itemCount: 20,
+        itemBuilder: (context, int index) {
+          return Card(
+            color: Colors.white,
+            child: ListTile(
+              leading: IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.person_2),
+              ),
+              title: Text("${index + 1} Anvarjon"),
+              subtitle: const Text(
+                "double calls",
+                style: TextStyle(color: Colors.red),
+              ),
+              textColor: Colors.black,
+              trailing: IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.call_outlined),
+              ),
+            ),
+          );
+        },
+      ),
     );
   }
 }
