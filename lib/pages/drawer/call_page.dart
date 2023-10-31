@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:namednavigator/pages/drawer/contact_page.dart';
 
 class CallPage extends StatelessWidget {
   const CallPage({super.key});
@@ -8,7 +9,14 @@ class CallPage extends StatelessWidget {
       appBar: AppBar(
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ProfilePage(),
+                ),
+              );
+            },
             icon: const Icon(Icons.more_vert),
           ),
         ],
